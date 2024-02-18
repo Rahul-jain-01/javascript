@@ -19,3 +19,28 @@ const myFunction=function(){        //type => object function
 }
 
 //Note: Null has type object
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(Primitive), Heap(Non-Primitive)
+
+let myName="Rahul"
+
+let anotherName=myName
+anotherName="Rahul Jain"
+
+console.log(myName);
+console.log(anotherName);
+
+let userOne={
+    email:"user@google.com",
+    upi:"user@bl"
+}
+
+let userTwo=userOne
+
+userTwo.email="rahul@amazon.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
