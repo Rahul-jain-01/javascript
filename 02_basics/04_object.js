@@ -44,3 +44,4 @@ const course={
 const{courseTeacher: teacher,price }=course; //de-structuring
 //console.log(price); 
 
+ 
