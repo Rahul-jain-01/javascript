@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h2>>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="300px" id="metro" src="https://images1.wionews.com/images/wion/900x1600/2023/5/22/1684745665751_3474009189026453841458216941355854736521668n.jpg" alt="metro"></li>
+            <li><img width="300px" id="taj" src="https://cdn.pixabay.com/photo/2023/06/12/12/22/ai-generated-8058363_1280.jpg" alt="taj"></li>
+            <li><img width="300px" id="tom" src="https://filmfare.wwmindia.com/photogallery/2023/may/ai41685523436.jpg" alt="tom"></li>
+            <li><img width="300px" id="bng" src="https://thespeedyupdates.com/wp-content/uploads/2024/01/transportation-hub-with-highspeed-maglev-trains-teleportation-portals_741910-55108.jpg" alt="bng"></li>
+            <li><a style="color: aliceblue;" href="https://filmfare.wwmindia.com/content/2023/jun/ai111685942640.jpg" id="google">Ladies</a></li>
+        </ul>
+
+    </div>
+</body>
+<script>
+    // document.getElementById('metro').onclick=function(){ //not best approach
+    //     alert("Metro clicked");
+    // }
+
+    // document.getElementById('images').addEventListener('click',function(e){  //best approach
+    //     console.log("clicked inside UL");
+    // },false )
+    // document.getElementById('metro').addEventListener('click',function(e){  //best approach
+    //     console.log("CLicked on metro");
+    //     e.stopPropagation()
+    // },false )
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==="IMG"){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+
+
+        
+    },false)
+</script>
+</html>
